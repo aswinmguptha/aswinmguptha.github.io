@@ -34,11 +34,11 @@ permalink: /
 		
 	
 
-	<p id="moving"><font color = "white">root# echo "Where there is a shell, there is a way!"<font></p>
+	<p id="moving">root# echo "Where there is a shell, there is a way!"</p>
 	
 	<script type="text/javascript" style = "color:white">
 
-	new TypingText(document.getElementById("moving"), 100, function(i){ var ar = new Array("|"); return " " + ar[i.length % ar.length]; });
+	new TypingText(document.getElementById("moving").style.color = "white", 100, function(i){ var ar = new Array("|"); return " " + ar[i.length % ar.length]; });
 
 	//Type out examples:
 	TypingText.runAll();
