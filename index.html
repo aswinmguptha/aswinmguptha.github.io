@@ -5,8 +5,49 @@ permalink: /
 
 <html>
     <head>
-	<script type="text/javascript" src="js/TypingText.js">
-	</script>
+	{% if site.dynamic-typing and page.section-type == "index" %}
+	<script type="text/javascript" src="{{site.baseurl}}/js/typed.min.js"></script>
+  <script type="text/javascript">
+
+  var myQuotes =  new Array();
+  {% for line in site.lines %}
+    myQuotes.push("{{ line.text }}");
+  {% endfor %}
+
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex ;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  {% if site.shuffle %}
+    shuffle(myQuotes)
+  {% endif %}
+
+    $(".intro-text").typed({
+      strings: myQuotes,
+      typeSpeed: {{ site.type-speed }},
+      backDelay: {{ site.delete-delay }},
+      startDelay: {{ site.start-delay }},
+      loop: {{ site..loop }},
+      loopCount: {{ site.loop-count }},
+      cursorChar: "|"
+    });
+  </script>
+	{% endif %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -32,18 +73,6 @@ permalink: /
 
             <h1>{{ site.name }}</h1>
 		
-	
-
-	<p id="moving"><i><font color = "white">root# echo "Where there is a shell, there is a way!"</font><i></p>
-	
-	<script type="text/javascript" style = "color:white">
-
-	new TypingText(document.getElementById("moving"), 100, function(i){ var ar = new Array("|"); return " " + ar[i.length % ar.length]; });
-
-	//Type out examples:
-	TypingText.runAll();
-	</script>
-	
 
             <h3><i>{{ site.description }}</i></h3>
 
