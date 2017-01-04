@@ -1,0 +1,32 @@
+name: Aswin M Guptha
+description: "root# echo "Where there is a shell, there is a way|"
+url: ""
+
+github_username:  aswinmguptha
+facebook_username: aswinmguptha
+twitter_username: aswinmguptha
+google_plus_username: aswinmguptha
+linkedin_username: aswinmguptha
+instagram_username:  aswinmguptha
+stack_of_username: aswinmguptha
+reddit_username: aswinmguptha
+blog_url: "aswinmguptha.wordpress.com"
+email: aswinmguptha@gmail.com
+public_key_url: "https://raw.pastebin.com/LINK-TO-PUBLIC-KEY"
+
+avatar: yes
+#avatar_img_path: "imgs/avatar.jpg""
+avatar_img_path: "https://avatars2.githubusercontent.com/u/17301305"
+
+front_img: yes
+front_img_path: "imgs/background.jpg"
+#front_img_path: "https://external.url/image.jpg"
+
+favicon_img: yes
+favicon_img_path: "imgs/favicon.ico"
+#favicon_img_path: "https://external.url/favicon.ico"
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
