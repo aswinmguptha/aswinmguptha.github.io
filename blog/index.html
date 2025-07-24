@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Aswin M Guptha</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <div class="terminal">
+        <span class="cursor">~/blog</span>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="../">home</a></li>
+            <li><a href="./">blog</a></li>
+            <li><a href="../projects/">projects</a></li>
+            <li><a href="../about/">about</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-nav">
+        <button class="mobile-nav-toggle" onclick="toggleMobileNav()">menu</button>
+        <div class="mobile-nav-menu" id="mobileMenu">
+            <a href="../">home</a>
+            <a href="./">blog</a>
+            <a href="../projects/">projects</a>
+            <a href="../about/">about</a>
+        </div>
+    </div>
+
+    <div class="container center">
+        <div class="content center">
+            <div class="page-title">
+                <h1 class="main-title">Coming Soon</h1>
+                <p class="subtitle large">something awesome is brewing...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="status" id="status" title="Active on weekdays 10:00 to 18:00 IST">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">currently online</span>
+    </div>
+
+    <div class="credit" id="credit" title="Click to copy prompt" onclick="copyPrompt('Create a blog section using this theme')">
+        <div class="credit-icon copyright-icon" id="creditIcon"></div>
+        <span>made with ♥ by claude.ai</span>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

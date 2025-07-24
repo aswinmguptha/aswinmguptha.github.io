@@ -1,0 +1,462 @@
+/* Shared CSS for Aswin M Guptha Portfolio */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0a0a0a;
+    --surface: #1a1a1a;
+    --text-primary: #e5e5e5;
+    --text-secondary: #999999;
+    --accent: #4a90e2;
+    --accent-dim: #ff6b3520;
+    --border: #2a2a2a;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Main Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container.center {
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+}
+
+.content.center {
+    text-align: center;
+}
+
+/* Headers */
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.subtitle.large {
+    font-size: 1.1rem;
+}
+
+/* Header Section (for main page) */
+.header {
+    margin-bottom: 3rem;
+}
+
+/* Bio Section */
+.bio {
+    max-width: 600px;
+    margin-bottom: 4rem;
+}
+
+.bio-text {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.skill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Links Section */
+.links {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--accent);
+}
+
+.link::before {
+    content: '→';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+
+.link:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Email link tick feedback */
+.email-link.copied::before {
+    content: '✓';
+    color: #00ff00;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Status Bar */
+.status {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.status:hover {
+    color: var(--text-primary);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+}
+
+.status-dot.active {
+    background: #00ff00;
+}
+
+.status-dot.recent {
+    background: #ff8c00;
+}
+
+.status-dot.offline {
+    background: #666666;
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Made with love */
+.credit {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.credit:hover {
+    color: var(--text-primary);
+}
+
+.credit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.copyright-icon::before {
+    content: '©';
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.tick-icon::before {
+    content: '✓';
+    color: #00ff00;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Command Line Effect */
+.terminal {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+.cursor::after {
+    content: '_';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.mobile-nav-toggle {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--mono);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.mobile-nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    min-width: 120px;
+    display: none;
+}
+
+.mobile-nav-menu.active {
+    display: block;
+}
+
+.mobile-nav-menu a {
+    display: block;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-menu a:hover {
+    color: var(--accent);
+}
+
+/* Floating particles effect */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .bio-text {
+        font-size: 1.1rem;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .status {
+        position: static;
+        margin-top: 3rem;
+        justify-content: center;
+    }
+
+    .credit {
+        position: static;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .terminal {
+        position: static;
+        text-align: center;
+        margin-bottom: 2rem;
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .bio {
+        max-width: none;
+    }
+}
+
+/* Subtle animations */
+.content > * {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.header { animation-delay: 0.1s; }
+.bio { animation-delay: 0.2s; }
+.links { animation-delay: 0.3s; }
+.page-title { animation-delay: 0.1s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

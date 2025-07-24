@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin M Guptha</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="terminal">
+        <span class="cursor">~/</span>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="#">home</a></li>
+            <li><a href="blog/">blog</a></li>
+            <li><a href="projects/">projects</a></li>
+            <li><a href="about/">about</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-nav">
+        <button class="mobile-nav-toggle" onclick="toggleMobileNav()">menu</button>
+        <div class="mobile-nav-menu" id="mobileMenu">
+            <a href="#">home</a>
+            <a href="blog/">blog</a>
+            <a href="projects/">projects</a>
+            <a href="about/">about</a>
+        </div>
+    </div>
+
+    <div class="container" id="home">
+        <div class="content">
+            <div class="header">
+                <h1 class="main-title">Aswin M Guptha</h1>
+                <p class="subtitle">appsec engineer / cybersecurity researcher / ctf player</p>
+            </div>
+
+            <div class="bio">
+                <p class="bio-text">
+                    I build, break, and secure systems. I play CTFs, conduct security assessments, and build security tools.
+                </p>
+                
+                <div class="skills">
+                    <span class="skill">webapp security</span>
+                    <span class="skill">api security</span>
+                    <span class="skill">red team</span>
+                    <span class="skill">ctfs</span>
+                    <span class="skill">ai security</span>
+                    <span class="skill">security research</span>
+                    <span class="skill">vulnerability assessment</span>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://github.com/aswinmguptha" class="link" target="_blank">github</a>
+                <a href="https://linkedin.com/in/aswinmguptha" class="link" target="_blank">linkedin</a>
+                <a href="#" class="link email-link" onclick="copyDecryptedEmail()" title="click to copy">
+                    <span id="emailText">email</span>
+                </a>
+                <a href="Aswin_M_Guptha_Resume.pdf" class="link" target="_blank">resume</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="status" id="status" title="Active on weekdays 10:00 to 18:00 IST">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">currently online</span>
+    </div>
+
+    <div class="credit" id="credit" title="Click to copy prompt" onclick="copyPrompt()">
+        <div class="credit-icon copyright-icon" id="creditIcon"></div>
+        <span>made with ♥ by claude.ai</span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
