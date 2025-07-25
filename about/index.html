@@ -28,31 +28,77 @@
         <button class="mobile-nav-toggle" onclick="toggleMobileNav()">menu</button>
         <div class="mobile-nav-menu" id="mobileMenu">
             <a href="../">home</a>
-            <a href="../">blog</a>
+            <a href="../blog/">blog</a>
             <a href="../projects/">projects</a>
-            <a href="">about</a>
+            <a href="./">about</a>
         </div>
     </div>
 
-    <div class="container center">
-        <div class="content center">
-            <div class="page-title">
-                <h1 class="main-title">Coming Soon</h1>
-                <p class="subtitle large">something awesome is brewing...</p>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <h1 class="about-section-title">$ whoami</h1>
             </div>
-        </div>
+
+            <div class="bio">
+    <div class="about-section">
+        <p class="bio-text">
+            I'm Aswin M Guptha — <span class="highlight">I break things, fix them, and help others learn how to do both.</span>
+        </p>
+        <p class="bio-text">
+            I work in application security with a focus on web, API, and mobile apps. My role sits at the intersection 
+            of <span class="highlight">security and engineering</span> — making sure the things we build are not only functional but resilient. 
+            Whether it’s reviewing code, shaping threat models, or embedding checks into CI/CD pipelines, I believe security should enhance, not interrupt, 
+            how teams work.
+        </p>
     </div>
+
+    <div class="about-section">
+        <p class="bio-text">
+            Over the years, I've led security initiatives at <strong>Traboda CyberLabs</strong>, guided developers through remediation, and helped shape 
+            how security fits into the broader engineering lifecycle. I also speak at conferences, train dev teams, and occasionally dig into open-source 
+            projects to report vulnerabilities — <span class="highlight">a few of which have earned CVEs</span>.
+        </p>
+    </div>
+
+    <div class="about-section">
+        <p class="bio-text">
+            I've been part of <strong>Team bi0s</strong> for years — <span class="highlight">mentoring researchers</span>, contributing to CTF wins, and 
+            helping organize some of <span class="highlight">India’s most recognized cybersecurity competitions</span> like InCTF and InCTF Junior. I’ve seen 
+            firsthand how community can change careers, and I try to give back every chance I get.
+        </p>
+    </div>
+
+    <div class="about-section">
+        <p class="bio-text">
+            My work isn’t about just finding bugs — it’s about <span class="highlight">solving the right problems, enabling teams to move securely, and building 
+                things that actually scale</span>. I believe the best security work disappears into the product — not because it’s invisible, but because it’s 
+                designed right.
+        </p>
+    </div>
+
+    <div class="about-section">
+        <p class="bio-text">
+            Outside of work, I stay curious — reading writeups, writing tools, experimenting with edge cases, or building challenges for others to learn from. 
+        </p>
+        <p class="bio-text">
+            If you're into <span class="highlight">AppSec, CTFs, or building systems that are hard to break</span> — let’s talk.
+        </p>
+    </div>
+</div>
+
 
     <div class="status" id="status" title="Active on weekdays 10:00 to 18:00 IST">
         <div class="status-dot" id="statusDot"></div>
         <span id="statusText">currently online</span>
     </div>
 
-    <div class="credit" id="credit" title="Click to copy prompt" onclick="copyPrompt('Create a blog section using this theme')">
+    <div class="credit" id="credit" title="Click to copy prompt" onclick="copyPrompt('Create an about page using this theme')">
         <div class="credit-icon copyright-icon" id="creditIcon"></div>
         <span>made with ♥ by claude.ai</span>
     </div>
 
     <script src="../assets/js/main.js"></script>
+
 </body>
 </html>

@@ -96,6 +96,7 @@ body {
 
 /* Header Section (for main page) */
 .header {
+    margin-top: 5rem;
     margin-bottom: 3rem;
 }
 
@@ -111,6 +112,7 @@ body {
     line-height: 1.7;
     color: var(--text-primary);
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .skills {
@@ -459,4 +461,25 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: 500;
+}
+.about-section {
+    margin-bottom: 2rem;
+}
+
+.about-section-title {
+    font-family: var(--mono);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.bio-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
 }
