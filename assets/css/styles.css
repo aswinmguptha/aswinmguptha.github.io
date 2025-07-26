@@ -455,6 +455,9 @@ body {
 .bio { animation-delay: 0.2s; }
 .links { animation-delay: 0.3s; }
 .page-title { animation-delay: 0.1s; }
+.page-title.center {
+  text-align: center;
+}
 
 @keyframes fadeInUp {
     to {

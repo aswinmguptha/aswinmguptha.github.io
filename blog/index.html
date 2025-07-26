@@ -5,10 +5,24 @@ section: blog
 ---
 
 <div class="container center">
-  <div class="content center">
-    <div class="page-title">
-      <h1 class="main-title">Coming Soon</h1>
-      <p class="subtitle large">something awesome is brewing...</p>
+  <div class="content">
+    <div class="page-title center">
+      <h1 class="main-title">Blog</h1>
+      <p class="subtitle large">thoughts, research, and writeups</p>
+    </div>
+
+    <div class="blog-list">
+      {% for post in site.posts %}
+        <div class="blog-card">
+          <a href="{{ post.url }}" class="blog-card-link">
+            <h2 class="blog-title">{{ post.title }}</h2>
+            <p class="blog-date">{{ post.date | date: "%B %d, %Y" }}</p>
+            {% if post.excerpt %}
+              <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </div>
