@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: "Aswin M Guptha" }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="{{ '/assets/css/styles.css' | relative_url }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+    {% include terminal.html %}
+    {% include nav.html %}
+    {% include mobile-nav.html %}
+
+    {{ content }}
+
+    {% include status.html %}
+    {% include credit.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
