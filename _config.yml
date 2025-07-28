@@ -1,6 +1,8 @@
 title: Aswin M Guptha
 description: Portfolio & Blog
 baseurl: ""
-url: "https://aswinmguptha.github.io"
+url: "https://bitsbyamg.com"
 
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
