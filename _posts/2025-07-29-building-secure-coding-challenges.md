@@ -9,7 +9,7 @@ As a security engineer, I regularly work with real-world vulnerabilities in web,
 
 ---
 
-### 🧭 The Journey
+## 🧭 The Journey
 
 Over the years working in security engineering, I’ve come across the same types of issues repeatedly—access control misconfigurations, insecure input handling, broken logic in APIs. I’ve exploited them in live systems, written detailed reports, and recommended fixes.
 
