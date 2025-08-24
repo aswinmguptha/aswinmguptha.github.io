@@ -75,6 +75,13 @@ body {
     text-align: center;
 }
 
+.content ul,
+.content ol {
+  text-align: left;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
 /* Headers */
 .main-title {
     font-size: 3.5rem;
