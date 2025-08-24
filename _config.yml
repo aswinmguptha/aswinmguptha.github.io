@@ -1,6 +1,7 @@
 title: Aswin M Guptha
 description: Portfolio & Blog
 baseurl: ""
+permalink: /blog/post/:year/:month/:day/:title/
 url: "https://bitsbyamg.com"
 
 markdown: kramdown
