@@ -616,3 +616,18 @@ body {
     font-weight: 500;
     color: var(--text-primary);
 }
+
+.blog-post table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.blog-post th, td {
+    border: 1px solid var(--border);
+    padding: 8px;
+}
+
+.blog-post th:first-child, td:first-child {
+    white-space: nowrap;
+}
