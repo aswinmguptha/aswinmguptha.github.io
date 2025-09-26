@@ -277,3 +277,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles if particles container exists
     createParticles();
 });
+
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar-container');
+  const scrollThreshold = 50;
+  
+  if (window.scrollY > scrollThreshold) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
