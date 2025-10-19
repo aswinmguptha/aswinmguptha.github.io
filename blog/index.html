@@ -13,6 +13,7 @@ section: blog
 
     <div class="blog-list">
       {% for post in site.posts %}
+      {% unless post.hidden %}
         <div class="blog-card">
           <a href="{{ post.url }}" class="blog-card-link">
             <h2 class="blog-title">{{ post.title }}</h2>
@@ -22,6 +23,7 @@ section: blog
             {% endif %}
           </a>
         </div>
+      {% endunless %}
       {% endfor %}
     </div>
   </div>
