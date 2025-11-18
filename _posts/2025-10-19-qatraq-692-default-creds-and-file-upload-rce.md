@@ -6,7 +6,6 @@ hidden: true
 ---
 
 ### TL;DR
-
 While performing an internal security review of our infrastructure, I discovered an <span class="highlight">outdated instance of QaTraq 6.9.2</span>, a test management platform still used by one of our development teams. During analysis, I identified two critical vulnerabilities:
 
 * Unrestricted file upload leading to <span class="highlight">remote code execution</span>
@@ -102,21 +101,25 @@ After validating both issues:
 
 ## 🗓️ Disclosure Timeline
 
-| Date            | Action                                          |
-| ----------------| ----------------------------------------------- |
-| June 30, 2025   | Vulnerability identified during internal review |
-| July 18, 2025   | Verified in local environment                   |
-| July 22, 2025   | Vendor contacted                                |
-| October 13, 2025| CVE request submitted to MITRE                  |
+| Date             | Action                                          |
+| -----------------| ----------------------------------------------- |
+| June 30, 2025    | Vulnerability identified during internal review |
+| July 18, 2025    | Verified in local environment                   |
+| July 22, 2025    | Vendor contacted                                |
+| October 13, 2025 | CVE request submitted to MITRE                  |
+| November 13, 2025| CVE reserved by MITRE                           |
+| November 17, 2025| CVE Published
 
-The findings have been submitted to MITRE, and I will update this post once the CVE is officially assigned.
-
+The vulnerabilities have been published under the following CVE IDs.
+- [CVE-2025-63747](https://www.cve.org/CVERecord?id=CVE-2025-63747)
+- [CVE-2025-63748](https://www.cve.org/CVERecord?id=CVE-2025-63748)
+  
 ---
 
 ## 🧩 References
 
 1. QaTraq Project — [Archived Source Repository](https://sourceforge.net/projects/qatraq/)
-2. CVE IDs — *(Pending Assignment)*
+2. CVE IDs — CVE-2025-63747, CVE-2025-63748
 
 ---
 
