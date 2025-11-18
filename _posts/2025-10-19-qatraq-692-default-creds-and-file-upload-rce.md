@@ -2,7 +2,6 @@
 layout: post
 title: "When Legacy Meets Risk: Unrestricted File Upload & Default Credentials in QaTraq 6.9.2"
 section: blog
-hidden: true
 ---
 
 ### TL;DR
